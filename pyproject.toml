@@ -85,18 +85,18 @@ python = "3.11"
 check = [
   "black --check --diff {args:.}",
   "isort --check {args:.}",
-  "docformatter {args:--check .}",
+  "docformatter --check {args:.}",
   "ruff {args:.}",
   "typing",
 ]
 format = [
   "black {args:.}",
   "isort {args:.}",
-  "docformatter {args:--in-place .}",
+  "docformatter --in-place {args:.}",
   "ruff --fix {args:.}",
   "typing",
 ]
-typing = "mypy --install-types --non-interactive {args:src tests}"
+typing = "mypy {args:src tests}"
 
 [tool.coverage.run]
 branch = true
@@ -134,6 +134,8 @@ multi_line_output = 3
 profile = "black"
 
 [tool.mypy]
+install_types = true
+non_interactive = true
 strict = true
 
 [tool.ruff]
