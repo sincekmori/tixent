@@ -1,4 +1,4 @@
-from typing import List
+from typing import ClassVar, List
 
 import pytest
 from tiktoken.model import MODEL_TO_ENCODING
@@ -8,8 +8,8 @@ from tixent.exceptions import TextTooLongError
 
 
 class TestTiktokenCounter:
-    valid_model_names = list(MODEL_TO_ENCODING.keys())
-    valid_encoding_names = list(set(MODEL_TO_ENCODING.values()))
+    valid_model_names: ClassVar[List[str]] = list(MODEL_TO_ENCODING.keys())
+    valid_encoding_names: ClassVar[List[str]] = list(set(MODEL_TO_ENCODING.values()))
 
     def test_valid_model_name(self) -> None:
         name = self.valid_model_names[0]
