@@ -8,8 +8,6 @@ authors = [
 ]
 classifiers = [
   "Development Status :: 4 - Beta",
-  "Framework :: Hatch",
-  "Framework :: Pytest",
   "Intended Audience :: Developers",
   "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
